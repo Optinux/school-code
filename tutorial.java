@@ -29,7 +29,9 @@ public class tutorial{
            for(int i = 0 ; i < n ; i++){  //loop through array
               mongus[i] = rand.nextInt(b);    //declare numbers for each slot
            }
-           System.out.println(mongus);        //print the array
+           for(int i = 0 ; i < n ; i++){    //loop through array again
+               System.out.println(mongus[i]);   //print the array by going through each slot
+           }                
       return mongus;
    }
   
