@@ -10,7 +10,8 @@ public class tutorial{
       this.text = text1;
       this.n = 0;
       this.a = 0;
-      this.b = 10;
+      this.b = 0;
+
    }
   
    public void print(String input){
@@ -23,24 +24,31 @@ public class tutorial{
    }
 
 
-   public int[] uebung(int n){
-           Random rand = new Random();  //create random
-           int[] mongus = new int[n];   //create array w/ entry point value
-           for(int i = 0 ; i < n ; i++){  //loop through array
-              mongus[i] = rand.nextInt(b);    //declare numbers for each slot
+   public int[] uebung(int n, int b, int a) {
+       Random rand = new Random();  //create random
+       int[] mongus = new int[n];   //create array w/ entry point value
+       if (b < a) {                     //check if b < a
+           int temp = b;               //if yes then switch them around
+           b = a;
+           a = temp;
+           System.out.println("Switching required!");          //print whether or not switching required
+       } else System.out.println("no switching required!");         //print whether or not switching required
+           for (int i = 0; i < n; i++) {  //loop through array
+               mongus[i] = rand.nextInt(b - a + 1) + a;    //declare numbers for each slot
            }
-           for(int i = 0 ; i < n ; i++){    //loop through array again
-               System.out.println(mongus[i]);   //print the array by going through each slot
-           }                
-      return mongus;
-   }
+           for (int i = 0; i < n; i++) {    //loop through array again
+               System.out.print(mongus[i] + " ");   //print the array by going through each slot
+           }
+           return mongus;
+       }
+
   
    public static void main(String[] args) {
        tutorial t1 = new tutorial("dummy");
        t1.print2("mongus");
        t1.print2("sussy");
        t1.print2("obama");
-       t1.uebung(9);              
+       t1.uebung(20, 11, 36);
    }
   
   }
