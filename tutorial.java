@@ -10,8 +10,7 @@ public class tutorial{
       this.text = text1;
       this.n = 0;
       this.a = 0;
-      this.b = 0;
-
+      this.b = 0;     
    }
   
    public void print(String input){
@@ -42,7 +41,6 @@ public class tutorial{
            return mongus;
        }
 
-  
    public static void main(String[] args) {
        tutorial t1 = new tutorial("dummy");
        t1.print2("mongus");
