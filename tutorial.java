@@ -10,7 +10,8 @@ public class tutorial{
       this.text = text1;
       this.n = 0;
       this.a = 0;
-      this.b = 0;     
+      this.b = 0;
+
    }
   
    public void print(String input){
@@ -22,8 +23,13 @@ public class tutorial{
         text = NewWord;
    }
 
+   public void SummeBerechnen(){
 
-   public int[] uebung(int n, int b, int a) {
+
+   }
+
+
+  public int[] uebung(int n, int b, int a) {
        Random rand = new Random();  //create random
        int[] mongus = new int[n];   //create array w/ entry point value
        if (b < a) {                     //check if b < a
@@ -40,7 +46,7 @@ public class tutorial{
            }
            return mongus;
        }
-
+  
    public static void main(String[] args) {
        tutorial t1 = new tutorial("dummy");
        t1.print2("mongus");
@@ -48,5 +54,7 @@ public class tutorial{
        t1.print2("obama");
        t1.uebung(20, 11, 36);
    }
-  
   }
+
+
+
